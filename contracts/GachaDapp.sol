@@ -37,7 +37,7 @@ if(Myinfo.gachaCount == 5){
     payFunc(funcFee,Myinfo);
 Myinfo.gachaCount =0;
    } else {
-    funcFee=500;
+    funcFee=1000000000000000000;
     payFunc(funcFee,Myinfo);
         Myinfo.gachaCount++;
 }

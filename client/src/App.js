@@ -22,9 +22,9 @@ export default function App() {
     }, []);
 
     async function test() {
-        console.log(await contract.methods.test().estimateGas({ from: accounts[0], value: 500 }));
-        const gas = await contract.methods.test().estimateGas({ from: accounts[0], value: 500 });
-        await contract.methods.test().send({ from: accounts[0], gas: gas, value: 500 });
+        console.log(await contract.methods.test().estimateGas({ from: accounts[0], value: web3.utils.toWei("1", "ether") }));
+        const gas = await contract.methods.test().estimateGas({ from: accounts[0], value: web3.utils.toWei("1", "ether") });
+        await contract.methods.test().send({ from: accounts[0], gas: gas, value: web3.utils.toWei("1", "ether") });
     }
 
     return (
